@@ -1,0 +1,46 @@
+/* CSS para ocultar a imagem da estátua em telas pequenas */
+@media (max-width: 763px) {
+  .logo-width {
+    width: 100%;
+  }
+}
+
+/* Animação da logo */
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); /* Inicia deslocado para cima */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+.logo-animation {
+  animation: logoFadeIn 1.5s ease-out forwards; /* Animação suave */
+}
+
+/* Animação da estátua */
+@keyframes statueFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Inicia deslocado para baixo */
+  }
+  100% {
+  
+    transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+.statue-animation {
+  animation: statueFadeIn 2s ease-out forwards; /* Animação suave */
+}
+
+/* Certifique-se de que a classe statue-img-resposive ainda está presente para responsividade */
+@media (max-width: 768px) {
+  .statue-img-responsive {
+    display: none;
+  }
+}
+
