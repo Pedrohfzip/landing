@@ -61,24 +61,27 @@ export default function Header() {
         </div>
 
         <div className='row d-flex m-0 p-0 d-flex j mt-4 text-justify' >
-          <div className='col-6 logo-width   justify-content-center m-auto mt-5' style={{
+          <div className='col-7 logo-width   justify-content-center m-auto mt-5' style={{
             zIndex: '1',
           }}>
             <h1 className='logo-animation text-justify ' style={{
-                fontSize: '2.6rem',
+               
             }}>
               Você Tem Direito a um
-              <span style={{ background: '#B56E3C' }} className='p-2 text-justify'><strong>Benefício Previdenciário?</strong></span>
+            </h1>
+            <h1 className='w-100 text-white'>
+              <span style={{ background: '#153C41' }} className=' p-1'><strong>Benefício Previdenciário?</strong></span>
+
             </h1>
             <h2 className='logo-animation mb-5'> Descubra Agora com a
               Advogada Luana Mattos!</h2>
-            <h3 className='logo-animation mt-5 text-justify '>Especialista em Direito Previdenciário, pronta para garantir que seus direitos sejam respeitados e seus benefícios pagos corretamente.</h3>
+            <h3 className='logo-animation mt-5 text-justify '><strong> Oi , sou especialista em Direito Previdenciário, pronta para garantir que seus direitos sejam respeitados e seus benefícios pagos corretamente.</strong></h3>
               <div className='text-center mt-4'>
               <button
                 className='btn mt-3 btn-primary btn-lg px-5 w-100'
                 style={{
-                  backgroundColor: '#153C41',
-                  borderColor: '#153C41',
+                  backgroundColor: '#B56E3C',
+                  borderColor: '#B56E3C',
                   fontSize: '2rem',
                 }}
               >
@@ -86,7 +89,7 @@ export default function Header() {
               </button>
             </div>
           </div>
-          <div  className='col-6 logo-width align-items-center   justify-content-center m-auto mt-5'>
+          <div  className='col-5 logo-width align-items-center   justify-content-center m-auto mt-5'>
         
               <img
             src={fotoLuana}
@@ -102,7 +105,7 @@ export default function Header() {
           </div>
         </div>
    
-        </div>
+      </div>
 
     </>
   )
