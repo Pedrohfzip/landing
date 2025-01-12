@@ -1,4 +1,17 @@
 /* CSS para ocultar a imagem da estátua em telas pequenas */
+@font-face {
+  font-family: 'MinhaFonte';
+  src: url('../src/assets/fonts/pierson-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-style: normal;
+  font-weight: 800;
+  font-family: 'MinhaFonte', sans-serif;
+}
+
 @media (max-width: 763px) {
   .logo-width {
     width: 100%;
