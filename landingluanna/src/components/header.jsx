@@ -6,6 +6,7 @@ import background from '../../public/background.jpeg'
 import fotoLuana from '../../public/fotoLuana.jpg'
 import { useEffect } from 'react'
 import { use } from 'react'
+import oab from '../../public/oab-nacional.png'
 export default function Header({ scrollTo }) {
   
  
@@ -35,7 +36,7 @@ export default function Header({ scrollTo }) {
                 }}
               />
             </div>
-            <div className='d-flex gap-3 align-items-center justify-content-around text-end m-0 p-0'>
+            <div className='d-flex gap-3 align-items-center justify-content-around text-end m-0 p-0 mt-2'>
               {/* Ícone do WhatsApp */}
               <a 
                 href="https://wa.me/5549999089980" 
@@ -48,7 +49,7 @@ export default function Header({ scrollTo }) {
                   style={{ color: 'white' }} 
                 ></i>
               </a>
-
+            
               {/* Ícone do Instagram */}
               <a 
                 href="https://www.instagram.com/luanamattosadvogada/" 
@@ -93,6 +94,7 @@ export default function Header({ scrollTo }) {
               >
                 Agende sua Consulta
               </button>
+              
               <span style={{
                 fontSize: '1rem',
               }}>Consulta gratuita por 15 minutos para novos clientes! Não perca essa
@@ -112,8 +114,18 @@ export default function Header({ scrollTo }) {
             }}
            
             />
+            
             <p className='mt-2'>Luana Mattos, Pós-Graduada em Prática Previdenciária</p>
-
+  <img
+                src={oab}
+                alt="Logo"
+                className="statue-img logo-animation m-0 p-0"
+                style={{
+                   
+                    width: '20%',
+                 // Ajusta a logo para ocupar no máximo 80% da largura da div,   // Mantém a proporção da logo
+                }}
+              />
               {/* <p className='w-100' style={{
               fontSize: '1.2rem',
               }}>Com mais de 6 anos de experiência em direito previdenciário, a advogada

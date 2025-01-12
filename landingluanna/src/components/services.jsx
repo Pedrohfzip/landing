@@ -39,7 +39,9 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="container mt-5 text-dark">
+    <div className="container mt-5 text-dark p-5" style={{
+          background: '#153C41',
+        }}>
       <div className="row g-4">
         {services.map((service, index) => (
           <div className="col-md-4" key={index}>
