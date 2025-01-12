@@ -33,10 +33,11 @@ const Testimonials = () => {
     <div className="container mt-5">
       <div
         id="testimonialCarousel"
-        className="carousel slide mt-5"
+        className="carousel slide mt-5 text-center"
         data-bs-ride="false"
         style={{ overflow: "visible" }}
-      >
+          >
+        <h1 className="mb-5 mt-5">Avaliações</h1>
         <div className="carousel-inner">
           {reviews.map((review, index) => (
             <div

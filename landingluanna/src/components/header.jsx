@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../App.css'
 import statueImg from '../../public/estatuaAdvogada.png'
-import logo from '../../public/Logo.png'
+import logo from '../../public/logo.png'
 import background from '../../public/background.jpeg'
 import fotoLuana from '../../public/fotoLuana.jpg'
 import { useEffect } from 'react'
@@ -20,7 +20,9 @@ export default function Header({ scrollTo }) {
             overflow: 'visible', // Permite o efeito "pra fora" da div
           }}
       >
-        <div className='row d-flex m-0 p-0 d-flex justify-content-center mt-5' >
+        <div className='row d-flex m-0 p-0 d-flex justify-content-center p-5 ' style={{
+          background: '#153C41',
+        }}>
             <div className='col-6 logo-width  d-flex justify-content-center m-auto'>
               <img
                 src={logo}
@@ -33,19 +35,17 @@ export default function Header({ scrollTo }) {
                 }}
               />
             </div>
-        </div>
-       <div className='row justify-content-end text-end m-0 p-0'>
-            <div className='d-flex gap-3 align-items-center justify-content-end text-end m-0 p-0'>
+            <div className='d-flex gap-3 align-items-center justify-content-around text-end m-0 p-0'>
               {/* Ícone do WhatsApp */}
               <a 
-                href="https://wa.me/5511999999999" 
+                href="https://wa.me/5549999089980" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-decoration-none logo-animation"
               >
                 <i 
                   className="fab fa-whatsapp fa-2x" 
-                  style={{ color: 'black' }} 
+                  style={{ color: 'white' }} 
                 ></i>
               </a>
 
@@ -58,14 +58,16 @@ export default function Header({ scrollTo }) {
               >
                 <i 
                   className="fab fa-instagram fa-2x" 
-                  style={{ color: 'black' }} 
+                  style={{ color: 'white' }} 
                 ></i>
               </a>
             </div>
         </div>
+       <div className='row justify-content-end text-end m-0 p-0'>
+        </div>
 
         <div className='row d-flex m-0 p-0 d-flex j mt-4 text-justify' >
-          <div className='col-7 logo-width   justify-content-center m-auto mt-5' style={{
+          <div className='col-5 logo-width align-items-center   justify-content-center m-auto mt-5' style={{
             zIndex: '1',
           }}>
             <h1 className='logo-animation text-justify ' style={{
@@ -73,10 +75,10 @@ export default function Header({ scrollTo }) {
             }}>
               Você Tem Direito a um
             </h1>
-            <h1 className='w-100 text-white logo-animation'>
+            <h2 className='w-100 text-white logo-animation'>
               <span style={{ background: '#153C41' }} className=' p-1'><strong>Benefício Previdenciário?</strong></span>
 
-            </h1>
+            </h2>
             <h2 className='logo-animation mb-5 logo-animation'> Descubra Agora com a
               Advogada Luana Mattos!</h2>
             <h3 className='logo-animation mt-5 text-justify '><strong> Oi , sou especialista em Direito Previdenciário, pronta para garantir que seus direitos sejam respeitados e seus benefícios pagos corretamente.</strong></h3>
@@ -98,7 +100,7 @@ export default function Header({ scrollTo }) {
             </div>
           
           </div>
-          <div  className='col-5 logo-width align-items-center   justify-content-center m-auto mt-5'>
+          <div  className='col-7 logo-width align-items-center text-end   justify-content-center m-auto '>
         
               <img
             src={fotoLuana}
@@ -111,12 +113,12 @@ export default function Header({ scrollTo }) {
            
             />
             <p className='mt-2'>Luana Mattos, Pós-Graduada em Prática Previdenciária</p>
-            
-            <p className='w-100' style={{
-             fontSize: '1.2rem',
-            }}>Com mais de 6 anos de experiência em direito previdenciário, a advogada
-            Luana Mattos já ajudou centenas de pessoas a conquistar o benefício que é
-            delas por direito, com um atendimento especializado e humanizado.</p>
+
+              {/* <p className='w-100' style={{
+              fontSize: '1.2rem',
+              }}>Com mais de 6 anos de experiência em direito previdenciário, a advogada
+              Luana Mattos já ajudou centenas de pessoas a conquistar o benefício que é
+              delas por direito, com um atendimento especializado e humanizado.</p> */}
           </div>
             
         </div>

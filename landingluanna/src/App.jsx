@@ -27,7 +27,7 @@ function App() {
         ref={section1Ref}
       >
         <Header />
-      </div>
+    
 
       {/* Botão "Veja mais" */}
       <div className="row text-center mt-4">
@@ -49,7 +49,7 @@ function App() {
           ></i>
         </h4>
       </div>
-
+  </div>
       {/* Segunda seção */}
       <div
         id="section2"
@@ -73,7 +73,7 @@ function App() {
       >
         <Testimonials />
       </div>
-        <div
+        {/* <div
         id="section2"
         ref={section2Ref}
         className="container text-center logo-animation h-100 w-100 mt-5 justify-content-center d-flex"
@@ -85,7 +85,7 @@ function App() {
          
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.1709832101883!2d-51.2238743!3d-27.4015947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e16555a497e367%3A0xddc47f209439654d!2sLuana%20Mattos%20-%20Advogada%20Previdenci%C3%A1ria!5e0!3m2!1spt-BR!2sbr!4v1736664078513!5m2!1spt-BR!2sbr"
-          width="600"
+          width="100%"
           height="450"
           style={{ border: 0 }}
           allowFullScreen
@@ -94,7 +94,7 @@ function App() {
           title="Localização de Luana Mattos"
         ></iframe>
        
-      </div>
+      </div> */}
 
       {/* Seção do iframe */}
       
