@@ -31,12 +31,12 @@ export default function Header({ scrollTo }) {
                 className="statue-img logo-animation m-0 p-0"
                 style={{
                    
-                    width: '90%',
+                    width: '50%',
                  // Ajusta a logo para ocupar no máximo 80% da largura da div,   // Mantém a proporção da logo
                 }}
               />
             </div>
-            <div className='d-flex gap-3 align-items-center justify-content-around text-end m-0 p-0 mt-2'>
+            <div  className='d-flex gap-3 align-items-center justify-content-around text-end m-0 p-0 mt-2'>
               {/* Ícone do WhatsApp */}
               <a 
                 href="https://wa.me/5549999089980" 
@@ -104,19 +104,19 @@ export default function Header({ scrollTo }) {
           </div>
           <div  className='col-7 logo-width align-items-center text-end   justify-content-center m-auto '>
         
-              <img
-            src={fotoLuana}
-            alt="Estátua"
-            className=" m-0 p-0 d-flex logo-animation align-items-center mt-5"
-            style={{
-              width: '100%',
-              boxShadow: '7px 3px 10px 2px rgba(0, 0, 0, 0.5)',
-            }}
-           
+            <img
+              src={fotoLuana}
+              alt="Estátua"
+              className=" m-0 p-0 d-flex logo-animation align-items-center mt-5"
+              style={{
+                width: '100% ',
+                height: '100%',
+                boxShadow: '7px 3px 10px 2px rgba(0, 0, 0, 0.5)',
+              }}
             />
             
             <p className='mt-2'>Luana Mattos, Pós-Graduada em Prática Previdenciária</p>
-  <img
+            <img
                 src={oab}
                 alt="Logo"
                 className="statue-img logo-animation m-0 p-0"

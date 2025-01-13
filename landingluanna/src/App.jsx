@@ -32,7 +32,19 @@ function App() {
       </div>
 
       {/* Botão "Veja mais" */}
-      <div className="row text-center mt-4">
+   
+
+      {/* Segunda seção */}
+      <div
+        id="section2"
+        ref={section2Ref}
+        className="container logo-animation h-100 w-100"
+        style={{
+          width: '100vw',
+          height: '100vh',
+        }}
+      >
+           <div className="row text-center mt-4">
         <h4
           className="logo-animation cursor"
           style={{
@@ -51,17 +63,6 @@ function App() {
           ></i>
         </h4>
       </div>
-
-      {/* Segunda seção */}
-      <div
-        id="section2"
-        ref={section2Ref}
-        className="container logo-animation h-100 w-100"
-        style={{
-          width: '100vw',
-          height: '100vh',
-        }}
-      >
         <Services />
       </div>
       <div
