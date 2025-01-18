@@ -3,7 +3,7 @@ import '../App.css';
 import './style.css';
 import logo from '../../public/img2header.jpeg'; // Caminho para a imagem de fundo alternativa
 import logo2 from '../../public/back2.png'; // Caminho para a imagem de fundo alternativa
-import logoMarca from '../../public/Logo.png'; // Caminho para a imagem de fundo alternativa
+import logoMarca from '../../public/logo.png'; // Caminho para a imagem de fundo alternativa
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Header({ scrollToSection }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
@@ -39,14 +39,15 @@ export default function Header({ scrollToSection }) {
         {/* Logo exibido apenas em telas pequenas */}
         {isMobile && (
           <>
-            <div className='w-100 h-100 d-flex flex-column '>
-                <div className='p-5'>
+            <div className='w-100 h-100 d-flex flex-column ' >
+                <div className='p-5' style={{ background: "#153C41" }}>
                     <img
                       src={logoMarca}
                       alt="Background"
                       className='m-0 d-flex align-items-center'
                       style={{
                         zIndex: -1,
+                    
                         // height: '100%',
                         // Mantém a proporção
                       }}
@@ -109,7 +110,7 @@ export default function Header({ scrollToSection }) {
 
        {isMobile && (
           <button onClick={toggleMenu} className="navbar-toggler text-white align-items-center d-flex text-center justify-content-center p-2">
-            <i className="fas fa-bars fa-2x text-dark"></i> {/* Ícone de três linhas (hamburger) */}
+            <i className="fas fa-bars fa-2x text-white"></i> {/* Ícone de três linhas (hamburger) */}
           </button>
         )}
 
