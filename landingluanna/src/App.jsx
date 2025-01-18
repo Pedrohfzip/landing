@@ -80,7 +80,7 @@ function App() {
 
       <div
         id="section4"
-        className="logo-animation h-100 w-100 text-center pt-2 pb-2 m-0"
+        className="logo-animation h-100 w-100 text-center pt-2 pb-5 m-0"
         style={{
           background: '#153C41',
           color: '#fff',
@@ -88,11 +88,11 @@ function App() {
       >
         <div className="row m-0">
           {/* Coluna da imagem */}
-          <div className="col-md-6 d-flex justify-content-center align-items-center">
+          <div className="col-md-6 d-flex justify-content-center align-items-center ">
             <img
               src={placa}
               alt="Placa"
-              className="m-0 p-0 logo-animation"
+              className="m-0 p-0 logo-animation "
               style={{
                 width: '100%',
                 borderRadius: '10px',
