@@ -3,8 +3,9 @@ import Header from './components/header';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Services from './components/services';
 import Testimonials from './components/reviews';
-import fotoLuana from '../public/fotoLuana.jpg'
-import placa from '../public/placa.jpg'
+import fotoLuana from '../public/fotoLuana.jpg';
+import placa from '../public/Identidade visual Luana Mattos.png';
+
 function App() {
   const section1Ref = useRef(null); // Referência para a primeira seção
   const section2Ref = useRef(null); // Referência para a segunda seção
@@ -18,35 +19,11 @@ function App() {
 
   return (
     <>
-      {/* Primeira seção */}
-      <div
-        className="container logo-animation h-100 w-100"
-        style={{
-          width: '100vw',
-          height: '100vh',
-        }}
-        id="section1"
-        ref={section1Ref}
-      >
-        <Header />
-      </div>
+      <Header />
 
-      {/* Botão "Veja mais" */}
-   
-
-      {/* Segunda seção */}
-      <div
-        id="section2"
-        ref={section2Ref}
-        className="container logo-animation h-100 w-100"
-        style={{
-          width: '100vw',
-          height: '100vh',
-        }}
-      >
-           <div className="row text-center mt-4">
+      <div className="row text-center m-0 p-0 mt-5">
         <h4
-          className="logo-animation cursor"
+          className="logo-animation cursor mb-5"
           style={{
             cursor: 'pointer',
           }}
@@ -54,7 +31,7 @@ function App() {
         >
           Serviços
           <i
-            className="fas fa-chevron-down mt-5 logo-animation"
+            className="fas fa-chevron-down logo-animation"
             style={{
               marginLeft: '10px',
               fontSize: '1.5rem',
@@ -62,120 +39,139 @@ function App() {
             }}
           ></i>
         </h4>
-      </div>
         <Services />
       </div>
+
       <div
         id="section3"
-        // ref={section2Ref}
-        className="container logo-animation h-100 w-100 mt-5"
+        className="logo-animation h-100 w-100 mt-5 "
         style={{
           width: '100vw',
           height: '100vh',
         }}
       >
+          <h4
+          className="logo-animation cursor mb-5 text-center"
+          style={{
+            cursor: 'pointer',
+          }}
+         // Chama a função com a referência da próxima seção
+        >
+          Avaliações
+          <i
+            className="fas fa-chevron-down logo-animation"
+            style={{
+              marginLeft: '10px',
+              fontSize: '1.5rem',
+              color: '#B56E3C',
+            }}
+          ></i>
+        </h4>
+   
+        <img
+          src="balanca.png"
+          alt="Balança da Justiça"
+          style={{
+            position: 'absolute',
+            width: '18%',
+            bottom: '0%',
+            zIndex: 1,
+          }}
+        />
         <Testimonials />
       </div>
-      <div
-  id="section4"
-  className="container logo-animation h-100 w-100 mt-5 text-center pt-2 pb-2"
-  style={{
-    background: "#153C41",
-    color: "#fff",
-  }}
->
-  <div className="row align-items-center">
-    {/* Coluna da imagem */}
-    <div className="col-md-6">
-      <img
-        src={placa}
-        alt="Estátua"
-        className="m-0 p-0 logo-animation"
-        style={{
-          width: "100%",
-          boxShadow: "7px 3px 10px 2px rgba(0, 0, 0, 0.5)",
-          borderRadius: "10px",
-        }}
-      />
-    </div>
-
-    {/* Coluna do texto */}
-    <div className="col-md-6 text-start">
-      <h2 className="mb-4">Benefícios de Contratar Luana Mattos</h2>
-      <ul
-        className="list-unstyled"
-        style={{
-          fontSize: "1.2rem",
-          lineHeight: "1.8",
-        }}
-      >
-        <li className="mb-3">
-          <span
-            style={{
-              fontWeight: "bold",
-              fontSize: "1.3rem",
-              color: "#FFD700",
-            }}
-          >
-            ● Especialização Reconhecida:
-          </span>
-          <br />
-          <span>Anos de experiência no Direito Previdenciário, focada em garantir benefícios e direitos previdenciários com eficiência.</span>
-        </li>
-        <li className="mb-3">
-          <span
-            style={{
-              fontWeight: "bold",
-              fontSize: "1.3rem",
-              color: "#FFD700",
-            }}
-          >
-            ● Transparência em Cada Etapa:
-          </span>
-          <br />
-          <span>Você recebe explicações claras sobre o andamento do seu caso, sem surpresas ou dúvidas.</span>
-        </li>
-        <li>
-          <span
-            style={{
-              fontWeight: "bold",
-              fontSize: "1.3rem",
-              color: "#FFD700",
-            }}
-          >
-            ● Consultoria Inicial sem Compromisso:
-          </span>
-          <br />
-          <span>Avaliação prévia para você entender suas possibilidades antes de tomar qualquer decisão.</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 
       <div
-       id="section4"
-        className="container logo-animation h-100 w-100 mt-5 text-center mt-5"
+        id="section4"
+        className="logo-animation h-100 w-100 text-center pt-2 pb-2"
         style={{
-          width: '100vw',
-          height: '100vh',
+          background: '#153C41',
+          color: '#fff',
         }}
       >
-        <h4>Não deixe seu direito ser ignorado! Agende sua consulta agora mesmo e
-          garanta a tranquilidade que você merece.</h4>
-          <button
-                className='btn mt-3 btn-primary btn-lg px-5 w-100 logo-animation'
-                style={{
-                  backgroundColor: '#B56E3C',
-                  borderColor: '#B56E3C',
-                  fontSize: '2rem',
-                }}
-              >
-                Agende sua Consulta
-              </button>
+        <div className="row">
+          {/* Coluna da imagem */}
+          <div className="col-md-6 d-flex justify-content-center align-items-center">
+            <img
+              src={placa}
+              alt="Placa"
+              className="m-0 p-0 logo-animation"
+              style={{
+                width: '100%',
+                borderRadius: '10px',
+              }}
+            />
+          </div>
+
+          {/* Coluna do texto */}
+          <div className="col-md-6 p-5 h2-custom-font text-start d-flex flex-column justify-content-between">
+            <h2 className="mb-4">Benefícios de Contratar Luana Mattos</h2>
+            <ul
+              className="list-unstyled d-flex flex-column mb-5"
+              style={{
+                fontSize: '1.2rem',
+                lineHeight: '1.8',
+              }}
+            >
+              <li className="mb-3">
+                <strong>● Especialização Reconhecida:</strong>
+                <br />
+                Anos de experiência no Direito Previdenciário, focada em
+                garantir benefícios e direitos previdenciários com eficiência.
+              </li>
+              <li className="mb-3">
+                <strong>● Transparência em Cada Etapa:</strong>
+                <br />
+                Você recebe explicações claras sobre o andamento do seu caso,
+                sem surpresas ou dúvidas.
+              </li>
+              <li>
+                <strong>● Consultoria Inicial sem Compromisso:</strong>
+                <br />
+                Avaliação prévia para você entender suas possibilidades antes de
+                tomar qualquer decisão.
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      {/* Seção do iframe */}
-      
+
+      {/* Footer */}
+      <footer
+        className="d-flex justify-content-between align-items-center p-4"
+        style={{
+          background: '#101010',
+          color: '#fff',
+        }}
+      >
+        {/* Imagem à esquerda */}
+        <div>
+          <img
+            src={placa}
+            alt="Placa"
+            style={{
+              width: '150px',
+              borderRadius: '8px',
+            }}
+          />
+        </div>
+
+        {/* Ícones e informações à direita */}
+        <div className="text-end">
+          <div className="mb-2">
+            <i className="fab fa-whatsapp fa-lg me-3"></i>
+            <span>(49) 99908-9980</span>
+          </div>
+          <div className="mb-2">
+            <i className="fab fa-instagram fa-lg me-3"></i>
+            <span>@luanamattosadvogada</span>
+          </div>
+          <div>
+            <i className="fas fa-envelope fa-lg me-3"></i>
+            <span>contato@luanamattos.com</span>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

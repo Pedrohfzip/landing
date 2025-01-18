@@ -39,15 +39,13 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="container mt-5 text-dark p-5" style={{
-          background: '#153C41',
-    }}>
+ 
       
-      <div className="row g-4">
+      <div className="row container g-4">
         {services.map((service, index) => (
-          <div className="col-md-4" key={index}>
-            <div className="card h-100 text-center shadow-sm">
-              <div className="card-body">
+          <div className="col-md-4 p-5" key={index}>
+            <div className="card h-100 text-center shadow-sm ">
+              <div className="card-body mb-4 ">
                 <FontAwesomeIcon icon={service.icon} size="3x" className="mb-3 text-dark" />
                 <h5 className="card-title">{service.title}</h5>
                 <p className="card-text">{service.description}</p>
@@ -56,7 +54,7 @@ const Services = () => {
           </div>
         ))}
       </div>
-    </div>
+  
   );
 };
 

@@ -1,7 +1,7 @@
 /* CSS para ocultar a imagem da estátua em telas pequenas */
 @font-face {
   font-family: 'MinhaFonte';
-  src: url('../src/assets/fonts/pierson-regular.ttf') format('truetype');
+  src: url('../src/assets/fonts/ITC Avant Garde Gothic LT Book.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

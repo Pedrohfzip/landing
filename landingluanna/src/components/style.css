@@ -1,0 +1,180 @@
+/* Estilo padrão para o header */
+
+
+.h2-custom-font {
+  font-family: 'MinhaFonte';
+  src: url('../src/assets/fonts/ITC Avant Garde Gothic LT Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+h2 {
+  font-family: 'MinhaFontePadrao', sans-serif; /* Fonte padrão */
+}
+img {
+  width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Ajusta a imagem sem distorções */
+}
+
+/* Container principal do header */
+.header-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* Faz o header ocupar toda a altura da viewport */
+  background-image: url('../../public/back2.png'); /* Caminho para a imagem */
+  background-size: cover; /* Ajusta a imagem ao tamanho do container sem cortes */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetições */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /* overflow: hidden; */
+  z-index: 0;
+}
+
+/* Conteúdo do header */
+.header-content {
+  position: absolute;
+  top: 10px; /* Ajuste a posição vertical dos ícones */
+  left: 10px; /* Ajuste a posição horizontal dos ícones */
+  display: flex;
+  flex-direction: row; /* Ícones em linha */
+  z-index: 1; /* Garante que os ícones fiquem acima do background */
+}
+/* Ícones ajustáveis */
+.fab {
+  font-size: 2rem; /* Ajuste o tamanho do ícone */
+  margin: 0.5rem;
+}
+
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  .header-container {
+    height: 50%; /* Permite que o header se ajuste dinamicamente */
+    background-position: top; /* Centraliza a imagem */
+    align-items: top;
+    min-height: 40vh; /* Garante uma altura mínima em telas menores */
+    background: none;
+    min-width: 50vw; /* Garante uma altura mínima em telas menores */
+    background-size: cover; /* Garante que a imagem se encaixe no espaço */
+    
+  }
+
+.header-content i {
+  font-size: 1.5rem; /* Ajuste o tamanho conforme necessário */
+  color: black; /* Estilo de cor */
+}
+  .fab {
+    font-size: 1.5rem; /* Reduz o tamanho dos ícones */
+  }
+}
+
+.header-text-container {
+  margin-top: 20px; /* Espaçamento entre a div superior e os textos */
+  padding: 20px;
+background: "#153C41";
+  border-radius: 8px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto */
+}
+
+.header-text {
+  font-size: 1.2rem;
+            background: "#153C41";
+  line-height: 1.8;
+  color: #333; /* Cor do texto */
+  margin-bottom: 10px; /* Espaçamento entre os parágrafos */
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 600px) {
+  .header-container {
+ /* Permite que o header se ajuste dinamicamente */
+    width: 100%;
+    height: 500px;
+    background-position: top; /* Centraliza a imagem */
+
+    min-height: 10vh; /* Garante uma altura mínima em telas menores */
+    min-width: 50vw; /* Garante uma altura mínima em telas menores */
+    background-size: cover; /* Garante que a imagem se encaixe no espaço */
+  }
+
+  .fab {
+    font-size: 1.5rem; /* Reduz o tamanho dos ícones */
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .header-container {
+    height: 80%; /* Permite que o header se ajuste dinamicamente */
+    background-position: top; /* Centraliza a imagem */
+    min-height: 80vh; /* Garante uma altura mínima em telas menores */
+    min-width: 50vw; /* Garante uma altura mínima em telas menores */
+    background-size: cover; /* Garante que a imagem se encaixe no espaço */
+  }
+
+  .fab {
+    font-size: 1.5rem; /* Reduz o tamanho dos ícones */
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .header-container {
+    height: 70%; /* Permite que o header se ajuste dinamicamente */
+    background-position: top; /* Centraliza a imagem */
+    min-height: 70vh; /* Garante uma altura mínima em telas menores */
+    min-width: 50vw; /* Garante uma altura mínima em telas menores */
+    background-size: cover; /* Garante que a imagem se encaixe no espaço */
+  }
+
+  .fab {
+    font-size: 1.5rem; /* Reduz o tamanho dos ícones */
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header-container {
+    height: 60%; /* Permite que o header se ajuste dinamicamente */
+    background-position: top; /* Centraliza a imagem */
+    min-height: 60vh; /* Garante uma altura mínima em telas menores */
+    min-width: 50vw; /* Garante uma altura mínima em telas menores */
+    background-size: cover; /* Garante que a imagem se encaixe no espaço */
+  }
+
+  .fab {
+    font-size: 1.5rem; /* Reduz o tamanho dos ícones */
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header-container {
+    height: 40%; /* Permite que o header se ajuste dinamicamente */
+    background-position: top; /* Centraliza a imagem */
+    min-height: 40vh; /* Garante uma altura mínima em telas menores */
+    min-width: 50vw; /* Garante uma altura mínima em telas menores */
+    background-size: cover; /* Garante que a imagem se encaixe no espaço */
+  }
+
+  .fab {
+    font-size: 1.5rem; /* Reduz o tamanho dos ícones */
+  }
+}
+
+
+
+
+/* Para dispositivos móveis (telas com largura menor que 768px) */
+@media screen and (max-width: 768px) {
+  img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    height: 100%; /* Mantém a proporção da imagem */
+  }
+
+  .logo-animation {
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte se necessário */
+    margin-top: 0;
+  }
+
+  .fab {
+    font-size: 1.5rem; /* Ajusta o tamanho dos ícones */
+  }
+}
