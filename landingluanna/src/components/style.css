@@ -7,7 +7,7 @@
   font-weight: normal;
   font-style: normal;
 }
-h2 {
+h1, h2, h3, h4, h5{
   font-family: 'MinhaFontePadrao', sans-serif; /* Fonte padrão */
 }
 img {
@@ -36,8 +36,9 @@ img {
 .header-content {
   position: absolute;
   top: 10px; /* Ajuste a posição vertical dos ícones */
-  left: 10px; /* Ajuste a posição horizontal dos ícones */
+  left: 0px; /* Ajuste a posição horizontal dos ícones */
   display: flex;
+  width: 100%;
   flex-direction: row; /* Ícones em linha */
   z-index: 1; /* Garante que os ícones fiquem acima do background */
 }
@@ -74,15 +75,15 @@ img {
   margin-top: 20px; /* Espaçamento entre a div superior e os textos */
   padding: 20px;
 background: "#153C41";
-  border-radius: 8px; /* Bordas arredondadas */
+
   text-align: center; /* Centraliza o texto */
 }
 
 .header-text {
   font-size: 1.2rem;
-            background: "#153C41";
-  line-height: 1.8;
-  color: #333; /* Cor do texto */
+
+  line-height: 2;
+  /* Cor do texto */
   margin-bottom: 10px; /* Espaçamento entre os parágrafos */
 }
 

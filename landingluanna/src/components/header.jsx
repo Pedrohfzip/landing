@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../App.css';
 import './style.css';
-import logo from '../../public/headerback.png'; // Caminho para a imagem de fundo alternativa
+import logo from '../../public/headerback3.png'; // Caminho para a imagem de fundo alternativa
+import 'bootstrap/dist/css/bootstrap.min.css';
+export default function Header({ scrollToSection }) {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+  const [menuVisible, setMenuVisible] = useState(false); // Estado para controlar a visibilidade do menu
+  const quemSomosRef = useRef(null);
+  const contatoRef = useRef(null);
 
-export default function Header({ scrollTo }) {
-  // Verifica o tamanho da janela para decidir o que renderizar
-  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 700);
+  const scrollTo = (refName) => {
+    if (refName === 'quemSomosRef' && contatoRef.current) {
+      contatoRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 700);
     };
@@ -19,10 +27,14 @@ export default function Header({ scrollTo }) {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible); // Alterna a visibilidade do menu
+  };
+
   return (
     <>
       <div className="header-container p-0 m-0">
-        {/* Renderiza a estrutura <img> se estiver em tela menor que 700px */}
+        {/* Logo exibido apenas em telas pequenas */}
         {isMobile && (
           <img
             src={logo}
@@ -35,44 +47,79 @@ export default function Header({ scrollTo }) {
           />
         )}
 
-        <div className="header-content">
-          <a
-            href="https://wa.me/5549999089980"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-decoration-none logo-animation me-1"
-          >
-            <i
-              className="fab fa-whatsapp fa-2x me-5"
-              style={{ color: 'black' }}
-            ></i>
+        <div id='navbar' className="header-content d-flex justify-content-start align-items-center p-3">
+           {!isMobile && (
+       <>
+   
+          <a href="https://wa.me/5549999089980" target="_blank" rel="noopener noreferrer" className="text-decoration-none logo-animation me-1">
+            <i className="fab fa-whatsapp fa-2x me-5" style={{ color: 'white' }}></i>
           </a>
-          <a
-            href="https://www.instagram.com/luanamattosadvogada/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-decoration-none logo-animation ms-1"
-          >
-            <i
-              className="fab fa-instagram fa-2x"
-              style={{ color: 'black' }}
-            ></i>
+          <a href="https://www.instagram.com/luanamattosadvogada/" target="_blank" rel="noopener noreferrer" className="text-decoration-none logo-animation ms-1">
+            <i className="fab fa-instagram fa-2x" style={{ color: 'white' }}></i>
           </a>
+        
+     
+         
+          
+              <span onClick={() => scrollToSection('servicos')} className="text-decoration-none logo-animation ms-5 text-white" style={{ cursor: 'pointer' }}>
+                Serviços
+              </span>
+              <span onClick={() => scrollToSection('contatoRef')} className="text-decoration-none logo-animation ms-5 cursor-pointer text-white" style={{ cursor: 'pointer' }}>
+                Contato
+              </span>
+              </>
+          )}
+          <div className='m-0 p-0 flex-wrap'>
+
+       {isMobile && (
+  <button onClick={toggleMenu} className="navbar-toggler text-white align-items-center d-flex text-center justify-content-center p-2">
+    <i className="fas fa-bars fa-2x text-white"></i> {/* Ícone de três linhas (hamburger) */}
+  </button>
+)}
+
+          {/* Menu de 3 linhas (hamburger) em telas pequenas */}
+          {isMobile && menuVisible && (
+              <div className="mobile-menu d-flex flex-column text-centet" style={{ backgroundColor: '#153C47', padding: '10px', display: 'flex' }}>
+                   <a href="https://wa.me/5549999089980" target="_blank" rel="noopener noreferrer" className="text-decoration-none logo-animation me-1">
+                <i className="fab fa-whatsapp fa-2x me-5" style={{ color: 'white' }}></i>
+              </a>
+              <a href="https://www.instagram.com/luanamattosadvogada/" target="_blank" rel="noopener noreferrer" className="text-decoration-none logo-animation ms-1">
+                <i className="fab fa-instagram fa-2x" style={{ color: 'white' }}></i>
+              </a>
+        
+              <span onClick={() => scrollToSection('servicos')} className="text-decoration-none logo-animation  text-white" style={{ cursor: 'pointer', display: 'block' }}>
+                Serviços
+              </span>
+              <span onClick={() => scrollToSection('contatoRef')} className="text-decoration-none logo-animation  cursor-pointer text-white" style={{ cursor: 'pointer', display: 'block' }}>
+                Contato
+              </span>
+            </div>
+          )}
+          </div>
         </div>
       </div>
 
-      {/* Nova div com os textos */}
-      <div className="header-text-container text-white m-0" style={{   background: "#153C41",}}>
-        <p className="header-text text-white">
-          Especialista em Direito Previdenciário, pronta para garantir que seus
-          direitos sejam respeitados e seus benefícios pagos corretamente.
-        </p>
-        <p className="header-text text-white">
-          Com mais de 6 anos de experiência em direito previdenciário, a
-          advogada Luana Mattos já ajudou centenas de pessoas a conquistar o
-          benefício que é delas por direito, com um atendimento especializado e
-          humanizado.
-        </p>
+      {/* Menu Responsivo - Exibido apenas quando o estado "menuVisible" for true */}
+
+
+      <div className="header-text-container d-flex justify-content-center flex-wrap text-white m-0" style={{ background: "#153C41" }}>
+        <div className="d-flex justify-content-center">
+          <h1 className="header-text text-white d-flex justify-content-center" style={{ background: "#153C47", fontSize: "2rem", padding: "10px" }}>
+            Você Tem Direito a um Benefício Previdenciário? Descubra Agora com a Advogada Luana Mattos!
+          </h1>
+        </div>
+
+        <div className="d-flex w-100 justify-content-center my-3">
+          <button className="btn btn-lg btn-warning text-uppercase fw-bold" style={{ padding: "15px 30px", fontSize: "1.5rem", borderRadius: "5px", backgroundColor: "#FFC107", color: "#153C41", border: "none", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)", cursor: "pointer" }} onClick={() => alert("Redirecionando para agendamento...")}>
+            Agende seu Horário AGORA!
+          </button>
+        </div>
+
+        <div className="d-flex justify-content-center">
+          <h3 className="header-text text-white" ref={quemSomosRef} id="quemSomosRef" style={{ background: "#153C41", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)", padding: "10px" }}>
+            Consulta gratuita por 15 minutos para novos clientes! Não perca essa oportunidade e proteja seus direitos agora.
+          </h3>
+        </div>
       </div>
     </>
   );

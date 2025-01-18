@@ -10,8 +10,15 @@ function App() {
   const section1Ref = useRef(null); // Referência para a primeira seção
   const section2Ref = useRef(null); // Referência para a segunda seção
 
-  const scrollToSection = (sectionRef) => {
-    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  const contatoRef = useRef(null);
+   const servicos = useRef(null);
+
+  const scrollToSection = (refName) => {
+    if (refName === 'contatoRef' && contatoRef.current) {
+      contatoRef.current.scrollIntoView({ behavior: 'smooth' });
+    } else if (refName === 'servicos' && servicos.current) {
+      servicos.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const [count, setCount] = useState(0);
@@ -19,25 +26,18 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header scrollToSection={scrollToSection}/>
 
-      <div className="row text-center m-0 p-0 mt-5">
+      <div className="row text-center m-0 p-0 mt-5 " ref={servicos} id='servicos'>
         <h4
-          className="logo-animation cursor mb-5"
+          className="logo-animation cursor mb-5 mt-5"
           style={{
             cursor: 'pointer',
           }}
           onClick={() => scrollToSection(section2Ref)} // Chama a função com a referência da próxima seção
         >
           Serviços
-          <i
-            className="fas fa-chevron-down logo-animation"
-            style={{
-              marginLeft: '10px',
-              fontSize: '1.5rem',
-              color: '#B56E3C',
-            }}
-          ></i>
+      
         </h4>
         <Services />
       </div>
@@ -58,14 +58,7 @@ function App() {
          // Chama a função com a referência da próxima seção
         >
           Avaliações
-          <i
-            className="fas fa-chevron-down logo-animation"
-            style={{
-              marginLeft: '10px',
-              fontSize: '1.5rem',
-              color: '#B56E3C',
-            }}
-          ></i>
+     
         </h4>
    
         <img
@@ -113,32 +106,40 @@ function App() {
                 lineHeight: '1.8',
               }}
             >
-              <li className="mb-3">
-                <strong>● Especialização Reconhecida:</strong>
+              <li className="mb-3 justify-text">
+                <h4 className='m-0 p-0'>● Especialização Reconhecida:</h4>
                 <br />
-                Anos de experiência no Direito Previdenciário, focada em
-                garantir benefícios e direitos previdenciários com eficiência.
+                Com mais de 6 anos de experiência em direito previdenciário, a advogada
+                Luana Mattos já ajudou centenas de pessoas a conquistar o benefício que é
+                delas por direito, com um atendimento especializado e humanizado.
               </li>
               <li className="mb-3">
-                <strong>● Transparência em Cada Etapa:</strong>
+                <h4 className='mt-3 p-0'>● Transparência em Cada Etapa:</h4>
                 <br />
                 Você recebe explicações claras sobre o andamento do seu caso,
                 sem surpresas ou dúvidas.
               </li>
               <li>
-                <strong>● Consultoria Inicial sem Compromisso:</strong>
+                <h4 className='mt-3 p-0'> ● Consultoria Inicial sem Compromisso:</h4>
                 <br />
                 Avaliação prévia para você entender suas possibilidades antes de
                 tomar qualquer decisão.
               </li>
             </ul>
           </div>
+          <div className="d-flex w-100 justify-content-center my-3">
+          <button className="btn btn-lg btn-warning text-uppercase fw-bold" style={{ padding: "15px 30px", fontSize: "1.5rem", borderRadius: "5px", backgroundColor: "#FFC107", color: "#153C41", border: "none", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)", cursor: "pointer" }} onClick={() => alert("Redirecionando para agendamento...")}>
+            Agende seu Horário AGORA!
+          </button>
+        </div>
         </div>
       </div>
 
       {/* Footer */}
       <footer
         className="d-flex justify-content-between align-items-center p-4"
+        ref={contatoRef}
+        id='contatoRef'
         style={{
           background: '#101010',
           color: '#fff',
@@ -157,7 +158,7 @@ function App() {
         </div>
 
         {/* Ícones e informações à direita */}
-        <div className="text-end">
+        <div className="text-center">
           <div className="mb-2">
             <i className="fab fa-whatsapp fa-lg me-3"></i>
             <span>(49) 99908-9980</span>

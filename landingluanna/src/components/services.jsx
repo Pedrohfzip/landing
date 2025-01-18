@@ -44,9 +44,9 @@ const Services = () => {
       <div className="row container g-4">
         {services.map((service, index) => (
           <div className="col-md-4 p-5" key={index}>
-            <div className="card h-100 text-center shadow-sm ">
-              <div className="card-body mb-4 ">
-                <FontAwesomeIcon icon={service.icon} size="3x" className="mb-3 text-dark" />
+            <div className="card h-100 text-center shadow-sm " style={{  background: '#153C41',}}>
+              <div className="card-body mb-4 text-white" >
+                <FontAwesomeIcon icon={service.icon} size="3x" className="mb-3 text-white" />
                 <h5 className="card-title">{service.title}</h5>
                 <p className="card-text">{service.description}</p>
               </div>
