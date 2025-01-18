@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faUserShield, faBalanceScale, faHandshake, faClock, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faUserShield, faBalanceScale, faHandshake, faClock, faHeart, faChartLine } from '@fortawesome/free-solid-svg-icons';
 
 const services = [
   {
@@ -12,7 +12,7 @@ const services = [
   },
   {
     title: 'Apoio em Aposentadorias',
-    description: 'Por idade, rural, híbrida, especial, aposentadoria por capacidade permanente,  pessoa com deficiência, e professor.',
+    description: 'Por idade, rural, híbrida, especial, aposentadoria por incapacidade permanente,  pessoa com deficiência, e professor.',
     icon: faUserShield,
   },
   {
@@ -35,13 +35,18 @@ const services = [
     description: 'Serviços focados em resultados, com acolhimento e transparência.',
     icon: faHeart,
   },
+    {
+    title: 'Planejamento Previdenciário',
+    description: 'Organize suas contribuições, maximize seus direitos e garanta uma aposentadoria tranquila e sem surpresas!',
+    icon: faChartLine,
+  },
 ];
 
 const Services = () => {
   return (
  
       
-      <div className="row container g-4">
+      <div className="row container g-4 mb-5 d-flex align-items-center justify-content-center">
         {services.map((service, index) => (
           <div className="col-md-4 p-5" key={index}>
             <div className="card h-100 text-center shadow-sm " style={{  background: '#153C41',}}>

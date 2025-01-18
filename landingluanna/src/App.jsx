@@ -4,6 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import Services from './components/services';
 import Testimonials from './components/reviews';
 import fotoLuana from '../public/fotoLuana.jpg';
+import vidro from '../public/Glass-Store.jpg';
 import placa from '../public/Identidade visual Luana Mattos.png';
 
 function App() {
@@ -51,7 +52,7 @@ function App() {
         }}
       >
           <h4
-          className="logo-animation cursor mb-5 text-center"
+          className="logo-animation cursor  text-center"
           style={{
             cursor: 'pointer',
           }}
@@ -71,7 +72,10 @@ function App() {
             zIndex: 1,
           }}
         />
+        <div style={{height: '100%'}}>
+
         <Testimonials />
+        </div>
       </div>
 
       <div
@@ -128,10 +132,30 @@ function App() {
             </ul>
           </div>
           <div className="d-flex w-100 justify-content-center my-3">
-          <button className="btn btn-lg btn-warning text-uppercase fw-bold" style={{ padding: "15px 30px", fontSize: "1.5rem", borderRadius: "5px", backgroundColor: "#FFC107", color: "#153C41", border: "none", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)", cursor: "pointer" }} onClick={() => alert("Redirecionando para agendamento...")}>
-            Agende seu Horário AGORA!
-          </button>
+          </div>
+          
         </div>
+        <div className='row d-flex justify-content-center text-center align-items-center flex-wrap'>
+          <div className='col-xl-6 col-md-12 '>
+              <img
+              src={vidro}
+              alt="Placa"
+              className="m-0 p-0 logo-animation"
+              style={{
+                width: '100%',
+                borderRadius: '10px',
+              }}
+            />
+          </div>   
+          <div className='col-xl-6 col-md-12  align-items-center d-flex flex-column justify-content-between mt-5'>
+
+            <h3 className='w-100 text-center d-flex mb-5'>A advogada Luana Mattos é especialista em direito previdenciário e pode
+              ajudar você a garantir seus direitos com relação ao INSS. Agende uma
+              consulta agora!</h3>
+            <button className="btn btn-lg btn-warning text-uppercase fw-bold m-0 d-flex mt-5" style={{ padding: "15px 30px", fontSize: "1.5rem", borderRadius: "5px", backgroundColor: "#FFC107", color: "#153C41", border: "none", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)", cursor: "pointer" }} onClick={() => alert("Redirecionando para agendamento...")}>
+              Agende seu Horário AGORA!
+            </button>
+          </div>
         </div>
       </div>
 
@@ -169,7 +193,7 @@ function App() {
           </div>
           <div>
             <i className="fas fa-envelope fa-lg me-3"></i>
-            <span>luannamatos.adv@hotmail.com</span>
+            <span>luanamattos.adv@hotmail.com</span>
           </div>
         </div>
       </footer>
