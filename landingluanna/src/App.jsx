@@ -69,7 +69,7 @@ function App() {
             position: 'absolute',
             width: '18%',
             bottom: '0%',
-            zIndex: 1,
+            zIndex: -1,
           }}
         />
         <div style={{height: '100%'}}>
