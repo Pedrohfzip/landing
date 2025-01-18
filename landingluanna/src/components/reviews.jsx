@@ -39,11 +39,11 @@ const Testimonials = () => {
         background: "white",
       }}
     >
-      <div className="row align-items-center " style={{ position: "relative", zIndex: 2 }}>
-        <div className="col-md-12 mt-2 mb-5 justify-content-center">
+      <div className="row align-items-center m-0" style={{ position: "relative", zIndex: 2 }}>
+        <div className="col-md-12  justify-content-center m-0">
           <div
             id="testimonialCarousel"
-            className="carousel slide mt-5 text-center d-flex justify-content-center"
+            className="carousel slide mt-5 text-center d-flex justify-content-center m-0"
             data-bs-ride="carousel"
             data-bs-interval="3000"
             style={{ overflow: "visible" }}

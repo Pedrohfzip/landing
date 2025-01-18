@@ -21,7 +21,7 @@ img {
   position: relative;
   width: 100vw;
   height: 100vh; /* Faz o header ocupar toda a altura da viewport */
-  /* background-image: url('../../public/back2.png'); Caminho para a imagem */
+
   background-size: cover; /* Ajusta a imagem ao tamanho do container sem cortes */
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat; /* Evita repetições */

@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../App.css';
 import './style.css';
-import logo from '../../public/headerback3.png'; // Caminho para a imagem de fundo alternativa
+import logo from '../../public/img2header.jpeg'; // Caminho para a imagem de fundo alternativa
 import logo2 from '../../public/back2.png'; // Caminho para a imagem de fundo alternativa
+import logoMarca from '../../public/Logo.png'; // Caminho para a imagem de fundo alternativa
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Header({ scrollToSection }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
@@ -37,15 +38,38 @@ export default function Header({ scrollToSection }) {
       <div className="header-container p-0 m-0">
         {/* Logo exibido apenas em telas pequenas */}
         {isMobile && (
-          <img
-            src={logo}
-            alt="Background"
-            className='m-0'
-            style={{
-              zIndex: -1,
-              // height: '100%', // Mantém a proporção
-            }}
-          />
+          <>
+            <div className='w-100 h-100 d-flex flex-column '>
+                <div className='p-5'>
+                    <img
+                      src={logoMarca}
+                      alt="Background"
+                      className='m-0 d-flex align-items-center'
+                      style={{
+                        zIndex: -1,
+                        // height: '100%',
+                        // Mantém a proporção
+                      }}
+                />
+                 
+                  </div>
+                  <div className='d-flex align-items-center'>
+
+                        <img
+                    src={logo}
+                    alt="Background"
+                    className='m-0'
+                    style={{
+                      // position: 'absolute',
+                      objectFit: 'cover',
+                      zIndex: -3,
+                      width: '100%',
+                      height: '100%', // Mantém a proporção
+                    }}
+                  />
+                  </div>
+            </div>
+          </>
         )}
           {!isMobile && (
           <img
@@ -84,14 +108,14 @@ export default function Header({ scrollToSection }) {
           <div className='m-0 p-0 flex-wrap'>
 
        {isMobile && (
-  <button onClick={toggleMenu} className="navbar-toggler text-white align-items-center d-flex text-center justify-content-center p-2">
-    <i className="fas fa-bars fa-2x text-white"></i> {/* Ícone de três linhas (hamburger) */}
-  </button>
-)}
+          <button onClick={toggleMenu} className="navbar-toggler text-white align-items-center d-flex text-center justify-content-center p-2">
+            <i className="fas fa-bars fa-2x text-dark"></i> {/* Ícone de três linhas (hamburger) */}
+          </button>
+        )}
 
           {/* Menu de 3 linhas (hamburger) em telas pequenas */}
           {isMobile && menuVisible && (
-              <div className="mobile-menu d-flex flex-column text-centet" style={{ backgroundColor: '#153C47', padding: '10px', display: 'flex' }}>
+              <div className="mobile-menu d-flex flex-column text-centet" style={{ backgroundColor: '#153C47', padding: '10px', display: 'flex', borderRadius: '15px' }}>
                    <a href="https://wa.me/5549999089980" target="_blank" rel="noopener noreferrer" className="text-decoration-none logo-animation me-1">
                 <i className="fab fa-whatsapp fa-2x me-5" style={{ color: 'white' }}></i>
               </a>
@@ -121,7 +145,7 @@ export default function Header({ scrollToSection }) {
           </h1>
         </div>
 
-        <div className="d-flex w-100 justify-content-center my-3">
+        <div className="d-flex w-100 justify-content-center ">
           <button className="btn btn-lg btn-warning text-uppercase fw-bold" style={{ padding: "15px 30px", fontSize: "1.5rem", borderRadius: "5px", backgroundColor: "#FFC107", color: "#153C41", border: "none", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)", cursor: "pointer" }} onClick={() => alert("Redirecionando para agendamento...")}>
             Agende seu Horário AGORA!
           </button>

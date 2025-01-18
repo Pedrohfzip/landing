@@ -44,7 +44,7 @@ function App() {
 
       <div
         id="section3"
-        className="logo-animation h-100 w-100 mt-5 "
+        className="logo-animation h-100 w-100 mt-5 m-0"
         style={{
           width: '100vw',
           height: '100vh',
@@ -76,13 +76,13 @@ function App() {
 
       <div
         id="section4"
-        className="logo-animation h-100 w-100 text-center pt-2 pb-2"
+        className="logo-animation h-100 w-100 text-center pt-2 pb-2 m-0"
         style={{
           background: '#153C41',
           color: '#fff',
         }}
       >
-        <div className="row">
+        <div className="row m-0">
           {/* Coluna da imagem */}
           <div className="col-md-6 d-flex justify-content-center align-items-center">
             <img
@@ -137,7 +137,7 @@ function App() {
 
       {/* Footer */}
       <footer
-        className="d-flex justify-content-between align-items-center p-4"
+        className="d-flex flex-wrap text-center justify-content-between align-items-center p-4 m-0"
         ref={contatoRef}
         id='contatoRef'
         style={{
@@ -146,7 +146,7 @@ function App() {
         }}
       >
         {/* Imagem à esquerda */}
-        <div>
+        <div className='text-center'>
           <img
             src={placa}
             alt="Placa"
@@ -158,7 +158,7 @@ function App() {
         </div>
 
         {/* Ícones e informações à direita */}
-        <div className="text-center">
+        <div className="text-center m-0">
           <div className="mb-2">
             <i className="fab fa-whatsapp fa-lg me-3"></i>
             <span>(49) 99908-9980</span>
