@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../App.css';
 import './style.css';
 import logo from '../../public/headerback3.png'; // Caminho para a imagem de fundo alternativa
+import logo2 from '../../public/back2.png'; // Caminho para a imagem de fundo alternativa
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Header({ scrollToSection }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
@@ -42,7 +43,18 @@ export default function Header({ scrollToSection }) {
             className='m-0'
             style={{
               zIndex: -1,
-              height: '100%', // Mantém a proporção
+              // height: '100%', // Mantém a proporção
+            }}
+          />
+        )}
+          {!isMobile && (
+          <img
+            src={logo2}
+            alt="Background"
+            className='m-0'
+            style={{
+              zIndex: -1,
+              // height: '100%', // Mantém a proporção
             }}
           />
         )}
