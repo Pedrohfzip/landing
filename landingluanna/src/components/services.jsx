@@ -12,12 +12,12 @@ const services = [
   },
   {
     title: 'Apoio em Aposentadorias',
-    description: 'Por idade, rural, híbrida, especial, pessoa com deficiência, e professor.',
+    description: 'Por idade, rural, híbrida, especial, aposentadoria por capacidade permanente,  pessoa com deficiência, e professor.',
     icon: faUserShield,
   },
   {
     title: 'Outros Benefícios Previdenciários',
-    description: 'Salário-maternidade, auxílio-doença, pensão por morte, e auxílio-acidente.',
+    description: 'Salário-maternidade, auxílio-doença, pensão por morte, auxílio-acidente.',
     icon: faBalanceScale,
   },
   {

@@ -169,7 +169,7 @@ function App() {
           </div>
           <div>
             <i className="fas fa-envelope fa-lg me-3"></i>
-            <span>contato@luanamattos.com</span>
+            <span>luannamatos.adv@hotmail.com</span>
           </div>
         </div>
       </footer>
