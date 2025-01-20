@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Testimonials = () => {
   const reviews = [
     { name: "Gabrielli Dallagnol Cunha", review: "Excelente profissional! Atenciosa e eficaz. Recomendo para quem busca um atendimento qualificado.", stars: 5 },
-    { name: "Gabriel Reidel", review: "Luana é a advogada mais competente e expert que eu conheço na área de previdência social, com uma grande excelência em seus processos, recomendo!", stars: 5 },
     { name: "Carlos Silva", review: "Profissional incrível, super atenciosa e dedicada! Recomendo fortemente.", stars: 5 },
     { name: "David Vinícius Fagundes Parissenti", review: "Excelente profissional, comprometida e empenhada em oferecer um exímio olhar técnico com um atendimento humanizado.", stars: 5 },
     { name: "Fabi Cavazzola", review: "No primeiro dia que tive contato com a Luana. Senti muita segurança  nas suas explicações...", stars: 5 },
