@@ -152,16 +152,36 @@ function App() {
             <h3 className='w-100 text-center d-flex mb-5'>A advogada Luana Mattos é especialista em direito previdenciário e pode
               ajudar você a garantir seus direitos com relação ao INSS. Agende uma
               consulta agora!</h3>
-            <button className="btn btn-lg btn-warning text-uppercase fw-bold m-0 d-flex mt-5" style={{ padding: "15px 30px", fontSize: "1.5rem", borderRadius: "5px", backgroundColor: "#FFC107", color: "#153C41", border: "none", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)", cursor: "pointer" }} onClick={() => alert("Redirecionando para agendamento...")}>
-              Agende seu Horário AGORA!
-            </button>
+                 <a 
+                  href="https://wa.me/5549999089980" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  <button 
+                    className="btn btn-lg btn-warning text-uppercase fw-bold" 
+                    style={{ 
+                      padding: "15px 30px", 
+                      fontSize: "1.5rem", 
+                      borderRadius: "5px", 
+                      backgroundColor: "#FFC107", 
+                      color: "#153C41", 
+                      border: "none", 
+                      boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)", 
+                      cursor: "pointer" 
+                    }}
+
+                  >
+                    Agende seu Horário AGORA!
+                  </button>
+                </a>
           </div>
         </div>
       </div>
 
       {/* Footer */}
       <footer
-        className="d-flex flex-wrap text-center justify-content-between align-items-center p-4 m-0"
+        className=" p-4 m-0"
         ref={contatoRef}
         id='contatoRef'
         style={{
@@ -169,33 +189,43 @@ function App() {
           color: '#fff',
         }}
       >
-        {/* Imagem à esquerda */}
-        <div className='text-center'>
-          <img
-            src={placa}
-            alt="Placa"
-            style={{
-              width: '150px',
-              borderRadius: '8px',
-            }}
-          />
-        </div>
 
-        {/* Ícones e informações à direita */}
-        <div className="text-center m-0">
-          <div className="mb-2">
-            <i className="fab fa-whatsapp fa-lg me-3"></i>
-            <span>(49) 99908-9980</span>
+        <div className='row d-flex'>
+          <div className='col-6 text-center'>
+            <img
+              src={placa}
+              alt="Placa"
+              style={{
+                width: '150px',
+                borderRadius: '8px',
+              }}
+            />
           </div>
-          <div className="mb-2">
-            <i className="fab fa-instagram fa-lg me-3"></i>
-            <span>@luanamattosadvogada</span>
-          </div>
-          <div>
-            <i className="fas fa-envelope fa-lg me-3"></i>
-            <span>luanamattos.adv@hotmail.com</span>
+
+          {/* Ícones e informações à direita */}
+          <div className="col-6 text-center m-0">
+            <div className="mb-2">
+              <i className="fab fa-whatsapp fa-lg me-3"></i>
+              <span>(49) 99908-9980</span>
+            </div>
+            <div className="mb-2">
+              <i className="fab fa-instagram fa-lg me-3"></i>
+              <span>@luanamattosadvogada</span>
+            </div>
+            <div>
+              <i className="fas fa-envelope fa-lg me-3"></i>
+              <span>luanamattos.adv@hotmail.com</span>
+            </div>
           </div>
         </div>
+        <div className='row text-center'>
+
+        <p><strong>Site desenvolvido por Pedro Henrique Fagundes <br />   <i className="fab fa-instagram fa-lg me-3"></i>
+              <span>@pedrofagunndes</span> </strong></p>
+        </div>
+        {/* Imagem à esquerda */}
+     
+
       </footer>
     </>
   );

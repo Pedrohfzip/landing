@@ -147,9 +147,30 @@ export default function Header({ scrollToSection }) {
         </div>
 
         <div className="d-flex w-100 justify-content-center mt-5">
-          <button className="btn btn-lg btn-warning text-uppercase fw-bold" style={{ padding: "15px 30px", fontSize: "1.5rem", borderRadius: "5px", backgroundColor: "#FFC107", color: "#153C41", border: "none", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)", cursor: "pointer" }} onClick={() => alert("Redirecionando para agendamento...")}>
+         <a 
+          href="https://wa.me/5549999089980" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
+        >
+          <button 
+            className="btn btn-lg btn-warning text-uppercase fw-bold" 
+            style={{ 
+              padding: "15px 30px", 
+              fontSize: "1.5rem", 
+              borderRadius: "5px", 
+              backgroundColor: "#FFC107", 
+              color: "#153C41", 
+              border: "none", 
+              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)", 
+              cursor: "pointer" 
+            }}
+
+          >
             Agende seu Horário AGORA!
           </button>
+        </a>
+
         </div>
 
         <div className="d-flex justify-content-center">
